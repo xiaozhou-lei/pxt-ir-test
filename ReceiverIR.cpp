@@ -1,6 +1,6 @@
 #include "pxt.h"
 
-enum class DigitalPin {
+enum class DigitalPin1 {
     P0 = MICROBIT_ID_IO_P0,
     P1 = MICROBIT_ID_IO_P1,
     P2 = MICROBIT_ID_IO_P2,
@@ -29,7 +29,7 @@ int ir_code = 0x00;
 int ir_addr = 0x00;
 int data;
 
-int getPinsValue(DigitalPin name) {
+int getPinsValue(DigitalPin1 name) {
     int id = (int)name;
     switch (id) {
         case MICROBIT_ID_IO_P0: return uBit.io.P0.getDigitalValue();
@@ -51,7 +51,7 @@ int getPinsValue(DigitalPin name) {
         case MICROBIT_ID_IO_P16: return uBit.io.P16.getDigitalValue();
         case MICROBIT_ID_IO_P19: return uBit.io.P19.getDigitalValue();
         case MICROBIT_ID_IO_P20: return uBit.io.P20.getDigitalValue();
-        default: return NULL;
+        // default: return NULL;
     }
 }
 
