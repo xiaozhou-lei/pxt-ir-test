@@ -162,7 +162,7 @@ namespace EM_IR {
 
     basic.forever(() => {
         if (state == 1) {
-            irstate = irCode(irPin);
+            irstate = em_irCode(irPin);
             if (irstate != 0) {
                 data1 = irstate & 0xff;
                 control.raiseEvent(11, 22)
