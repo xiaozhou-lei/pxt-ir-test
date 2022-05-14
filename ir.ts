@@ -106,7 +106,7 @@ enum RemoteButton {
 /**
  * Custom blocks
  */
-//% weight=100 color="#EE6A50" icon="\uf013" block="IR"
+//% weight=100 color="#EE6A50" icon="\uf013" block="irRemote"
 namespace EM_IR {
     let state: number;
     let data1: number;
