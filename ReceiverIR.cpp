@@ -1,36 +1,59 @@
 #include "pxt.h"
 
+enum class DigitalPin {
+    P0 = MICROBIT_ID_IO_P0,
+    P1 = MICROBIT_ID_IO_P1,
+    P2 = MICROBIT_ID_IO_P2,
+    P3 = MICROBIT_ID_IO_P3,
+    P4 = MICROBIT_ID_IO_P4,
+    P5 = MICROBIT_ID_IO_P5,
+    P6 = MICROBIT_ID_IO_P6,
+    P7 = MICROBIT_ID_IO_P7,
+    P8 = MICROBIT_ID_IO_P8,
+    P9 = MICROBIT_ID_IO_P9,
+    P10 = MICROBIT_ID_IO_P10,
+    P11 = MICROBIT_ID_IO_P11,
+    P12 = MICROBIT_ID_IO_P12,
+    P13 = MICROBIT_ID_IO_P13,
+    P14 = MICROBIT_ID_IO_P14,
+    P15 = MICROBIT_ID_IO_P15,
+    P16 = MICROBIT_ID_IO_P16,
+    //% blockHidden=1
+    P19 = MICROBIT_ID_IO_P19,
+    //% blockHidden=1
+    P20 = MICROBIT_ID_IO_P20,
+};
 
 namespace DFRobotIR { 
 int ir_code = 0x00;
 int ir_addr = 0x00;
 int data;
 
-    int getPinsValue{DigitalPin name} {
-        int id = (int)name;
-        switch (id) {
-            case MICROBIT_ID_IO_P0: return uBit.io.P0.getDigitalValue();
-            case MICROBIT_ID_IO_P1: return uBit.io.P1.getDigitalValue();
-            case MICROBIT_ID_IO_P2: return uBit.io.P2.getDigitalValue();
-            case MICROBIT_ID_IO_P3: return uBit.io.P3.getDigitalValue();
-            case MICROBIT_ID_IO_P4: return uBit.io.P4.getDigitalValue();
-            case MICROBIT_ID_IO_P5: return uBit.io.P5.getDigitalValue();
-            case MICROBIT_ID_IO_P6: return uBit.io.P6.getDigitalValue();
-            case MICROBIT_ID_IO_P7: return uBit.io.P7.getDigitalValue();
-            case MICROBIT_ID_IO_P8: return uBit.io.P8.getDigitalValue();
-            case MICROBIT_ID_IO_P9: return uBit.io.P9.getDigitalValue();
-            case MICROBIT_ID_IO_P10: return uBit.io.P10.getDigitalValue();
-            case MICROBIT_ID_IO_P11: return uBit.io.P11.getDigitalValue();
-            case MICROBIT_ID_IO_P12: return uBit.io.P12.getDigitalValue();
-            case MICROBIT_ID_IO_P13: return uBit.io.P13.getDigitalValue();
-            case MICROBIT_ID_IO_P14: return uBit.io.P14.getDigitalValue();
-            case MICROBIT_ID_IO_P15: return uBit.io.P15.getDigitalValue();
-            case MICROBIT_ID_IO_P16: return uBit.io.P16.getDigitalValue();
-            case MICROBIT_ID_IO_P19: return uBit.io.P19.getDigitalValue();
-            case MICROBIT_ID_IO_P20: return uBit.io.P20.getDigitalValue();
-            default: return NULL;
-        }
+int getPinsValue{DigitalPin name} {
+    int id = (int)name;
+    switch (id) {
+        case MICROBIT_ID_IO_P0: return uBit.io.P0.getDigitalValue();
+        case MICROBIT_ID_IO_P1: return uBit.io.P1.getDigitalValue();
+        case MICROBIT_ID_IO_P2: return uBit.io.P2.getDigitalValue();
+        case MICROBIT_ID_IO_P3: return uBit.io.P3.getDigitalValue();
+        case MICROBIT_ID_IO_P4: return uBit.io.P4.getDigitalValue();
+        case MICROBIT_ID_IO_P5: return uBit.io.P5.getDigitalValue();
+        case MICROBIT_ID_IO_P6: return uBit.io.P6.getDigitalValue();
+        case MICROBIT_ID_IO_P7: return uBit.io.P7.getDigitalValue();
+        case MICROBIT_ID_IO_P8: return uBit.io.P8.getDigitalValue();
+        case MICROBIT_ID_IO_P9: return uBit.io.P9.getDigitalValue();
+        case MICROBIT_ID_IO_P10: return uBit.io.P10.getDigitalValue();
+        case MICROBIT_ID_IO_P11: return uBit.io.P11.getDigitalValue();
+        case MICROBIT_ID_IO_P12: return uBit.io.P12.getDigitalValue();
+        case MICROBIT_ID_IO_P13: return uBit.io.P13.getDigitalValue();
+        case MICROBIT_ID_IO_P14: return uBit.io.P14.getDigitalValue();
+        case MICROBIT_ID_IO_P15: return uBit.io.P15.getDigitalValue();
+        case MICROBIT_ID_IO_P16: return uBit.io.P16.getDigitalValue();
+        case MICROBIT_ID_IO_P19: return uBit.io.P19.getDigitalValue();
+        case MICROBIT_ID_IO_P20: return uBit.io.P20.getDigitalValue();
+        default: return NULL;
     }
+}
 
 
 
