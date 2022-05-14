@@ -203,7 +203,7 @@ namespace EM_IR {
             case 16: return DigitalPin.P16;
             case 19: return DigitalPin.P19;
             case 20: return DigitalPin.P20;
-            default: return;
+            default: return DigitalPin.P0;
         }
     }
 }
