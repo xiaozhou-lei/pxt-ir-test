@@ -1,0 +1,22 @@
+{
+    "name": "ir",
+    "version": "0.0.1",
+    "description": "",
+    "dependencies": {
+        "core": "*",
+    },
+    "files": [
+        "main.ts",
+        "README.md",
+        "ReceiverIR.cpp",
+        "_locales/zh-cn/ir-strings.json",
+        "ir.ts"
+    ],
+    "testFiles": [
+        "test.ts"
+    ],
+    "supportedTargets": [
+        "microbit"
+    ],
+    "preferredEditor": "tsprj"
+}
