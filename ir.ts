@@ -126,7 +126,7 @@ namespace EM_IR {
     }
 
     //% shim=EMIR::irCode
-    function em_irCode(): number {
+    function em_irCode(number irPin1): number {
         return 0;
     }
 
@@ -139,7 +139,7 @@ namespace EM_IR {
     //% weight=60
     //% block="read IR key value"
     export function IR_read(): number {
-        pins.setPull(getPin(irPin), PinPullMode.PullUp)
+        pins.setPull(getPin(), PinPullMode.PullUp)
         return valuotokeyConversion();
     }
 
@@ -203,10 +203,7 @@ namespace EM_IR {
             case 16: return DigitalPin.P16;
             case 19: return DigitalPin.P19;
             case 20: return DigitalPin.P20;
-
-           
-        
-            
+            default: return;
         }
     }
 }
