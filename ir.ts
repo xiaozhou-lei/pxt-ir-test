@@ -126,7 +126,7 @@ namespace EM_IR {
     }
 
     //% shim=EMIR::irCode
-    function em_irCode(number irPin1): number {
+    function em_irCode(irPin1: number): number {
         return 0;
     }
 
