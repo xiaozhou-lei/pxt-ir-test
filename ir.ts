@@ -152,7 +152,7 @@ namespace EM_IR {
     //% block="当接收到红外的值时运行"
     //% draggableParameters
     export function OnPressEvent(cb: (message: number) => void) {
-        pins.setPull(getPin(irPin), PinPullMode.PullUp)
+        pins.setPull(getPin(), PinPullMode.PullUp)
         state = 1;
         control.onEvent(11, 22, function () {
             cb(data1)
@@ -174,7 +174,7 @@ namespace EM_IR {
 
     function valuotokeyConversion(): number {
         //serial.writeValue("x", irCode() )
-        let data = irCode(irPin);
+        let data = em_irCode(irPin);
         if (data == 0) {
         } else {
             irData = data & 0xff;
@@ -182,7 +182,7 @@ namespace EM_IR {
         return irData;
     }
 
-    function getPin(): DigitalPin {
+    function getPin(): number {
         switch (irPin) {
             case 0: return DigitalPin.P0;
             case 1: return DigitalPin.P1;
