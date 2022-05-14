@@ -106,7 +106,7 @@ enum RemoteButton {
 /**
  * Custom blocks
  */
-//% weight=100 color=#0fbc11 icon="\uf1eb" block="IR"
+//% weight=100 color="#EE6A50" icon="\uf013" block="IR"
 namespace EM_IR {
     let state: number;
     let data1: number;
@@ -118,8 +118,9 @@ namespace EM_IR {
      * initialises local variables
      *  @param pin describe parameter here, eg: IrPins.P5 
      */
+    //% weight=70
     //% blockId=IrRemote_init 
-    //% block="红外遥控器初始化引脚|%pin" 
+    //% block="遥控器初始化引脚|%pin" 
     export function IrRemote_init(pin: IrPins): void {
         irPin = pin;
         return;
@@ -138,7 +139,7 @@ namespace EM_IR {
      */
     //% weight=60
     //% block="read IR key value"
-    export function IR_read(): number {
+    export function EM_IR_read(): number {
         pins.setPull(getPin(), PinPullMode.PullUp)
         return valuotokeyConversion();
     }
@@ -149,7 +150,7 @@ namespace EM_IR {
      */
     //% weight=50
     //% blockId=onPressEvent
-    //% block="当接收到红外的值时运行"
+    //% block="on IR received"
     //% draggableParameters
     export function OnPressEvent(cb: (message: number) => void) {
         pins.setPull(getPin(), PinPullMode.PullUp)
